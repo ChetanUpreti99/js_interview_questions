@@ -51,14 +51,14 @@ number of arguments, continually adding them together until a termination condit
  */
 
 
-function sum(a) {
+/* function sum(a) {
   return function (b) {
     if (b) return sum(a + b)
     return a;
   }
 }
 
-console.log(sum(2)(10)(2)());
+console.log(sum(2)(10)(2)()); */
 
 
 /**
@@ -190,3 +190,50 @@ Explanation: In this example, currying is used to create a function that updates
 element identified by its ID. This showcases a practical application of 
 currying in web development for DOM manipulation.
  */
+
+/* function updateElementText(id) {
+  return function (text) {
+    let element = document.getElementById(id);
+    const elem1 = document.getElementById("para");
+    console.log(elem1);
+    console.log(element);
+    element.textContent = text;
+  }
+}
+
+const updateHeaderContent = updateElementText("heading");
+updateHeaderContent("hello Chetan Upreti"); */
+
+/**
+ * Question 8: Curry() implementation
+Explanation: This code snippet demonstrates a custom implementation of the 
+curry function, which transforms a multi-argument function into a curried function, 
+enabling partial application and 
+composability. It's applied to a simple sum function for demonstration.
+ */
+
+
+/* function someFun(fun) {
+  console.log(fun.length);
+}
+
+
+let sum = (a, b, c, d) => a + b + c + d;
+
+someFun(sum); */
+
+function curry(fun) {
+  return function curried(...args) {
+    if (args.length >= fun.length) {
+      return fun(...args);
+    } else {
+      return function (...next) {
+        return curried(...args, ...next);
+      }
+    }
+  }
+}
+
+let sum = (a, b, c, d) => a + b + c + d;
+let totalSum = curry(sum);
+console.log(totalSum(1)(6)(5)(8));
