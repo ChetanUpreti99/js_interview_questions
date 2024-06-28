@@ -384,3 +384,28 @@ to variables from its lexical scope even after that scope has closed, while scop
 and accessibility of variables within a specific context, 
 such as global scope, function scope, or block scope.
  */
+
+function checkClosure() {
+	let count = 0;
+	function increment() {
+		count = count + 1
+		console.log(`count: ${count}`)
+	}
+
+	function decrement() {
+		count = count - 1;
+		console.log(`count: ${count}`)
+	}
+
+	return {
+		increment,
+		decrement
+	}
+}
+
+let { increment, decrement } = checkClosure();
+
+increment();
+increment();
+decrement();
+decrement()
