@@ -1,5 +1,7 @@
 import { useMemo, useCallback, useState } from "react";
 
+import useCustomMemo from "./UseMemoPolyfill";
+
 const UseMemoUseCallBackHook = () => {
     const [counter, setCounter] = useState(0);
     const [counter2, setCounter2] = useState(0);
@@ -10,7 +12,8 @@ const UseMemoUseCallBackHook = () => {
     }
 
     const squaredValueUseMemo = useMemo(squaredValue, [counter]);
-    const squaredValueUseCallback = useCallback(squaredValue, [counter]);
+    //const squaredValueUseMemo = useCustomMemo(squaredValue, [counter]);
+    // const squaredValueUseCallback = useCallback(squaredValue, [counter]);
     return (
         <div>
             <h3>
@@ -51,8 +54,8 @@ const UseMemoUseCallBackHook = () => {
             It is hook used to memoize a provided callback function, returning the memoized version
             of the function.
             */}
-            <h2>Squared Counter: {squaredValueUseMemo}</h2>
-            <h2>Squared Counter: {squaredValueUseCallback()}</h2>
+            {/* <h2>Squared Counter: {squaredValueUseMemo}</h2> */}
+            {/* <h2>Squared Counter: {squaredValueUseCallback()}</h2> */}
 
             <h5>
                 Question 5: What happens when you use useCallback with empty
