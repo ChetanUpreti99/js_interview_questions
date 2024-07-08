@@ -226,3 +226,24 @@ fs.readFile("file.txt", 'utf8', (err, data) => {
         myEventEmitter.emit("fileFetched", data);
     }
 }) */
+
+
+//How would you write custom middleware for logging requests in an Express app?
+
+/* const express = require("express");
+const app = express();
+
+const logger = (req, res, next) => {
+    console.log(req.url);
+    next();
+}
+
+app.use(logger);
+
+app.get("/home", (req, res) => {
+    res.send("home api");
+})
+
+app.listen(4000, () => {
+    console.log('server running');
+}); */
