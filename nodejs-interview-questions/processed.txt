@@ -1,0 +1,152 @@
+Statistical profiling result from isolate-0x138008000-75016-v8.log, (279 ticks, 277 unaccounted, 0 excluded).
+
+ [Shared libraries]:
+   ticks  total  nonlib   name
+
+ [JavaScript]:
+   ticks  total  nonlib   name
+      1    0.4%    0.4%  JS: ~resolve node:path:1095:10
+      1    0.4%    0.4%  Builtin: StoreIC_NoFeedback
+
+ [C++]:
+   ticks  total  nonlib   name
+
+ [Summary]:
+   ticks  total  nonlib   name
+      2    0.7%    0.7%  JavaScript
+      0    0.0%    0.0%  C++
+      2    0.7%    0.7%  GC
+      0    0.0%          Shared libraries
+    277   99.3%          Unaccounted
+
+ [C++ entry points]:
+   ticks    cpp   total   name
+
+ [Bottom up (heavy) profile]:
+  Note: percentage shows a share of a particular caller in the total
+  amount of its parent calls.
+  Callers occupying less than 1.0% are not shown.
+
+   ticks parent  name
+    277   99.3%  UNKNOWN
+    142   51.3%    JS: ~inspectorWaitForDebugger node:inspector:186:34
+    142  100.0%      JS: ~Ha /private/var/folders/rl/pgvvs8jj0xv2r03srf61b9dc0000gn/T/AppTranslocation/A89824DA-F3F1-4239-BF51-1395CE1352AB/d/Visual Studio Code 2.app/Contents/Resources/app/extensions/ms-vscode.js-debug/src/bootloader.js:8:6835
+    142  100.0%        JS: ~<anonymous> /private/var/folders/rl/pgvvs8jj0xv2r03srf61b9dc0000gn/T/AppTranslocation/A89824DA-F3F1-4239-BF51-1395CE1352AB/d/Visual Studio Code 2.app/Contents/Resources/app/extensions/ms-vscode.js-debug/src/bootloader.js:8:6168
+    142  100.0%          JS: ~<anonymous> /private/var/folders/rl/pgvvs8jj0xv2r03srf61b9dc0000gn/T/AppTranslocation/A89824DA-F3F1-4239-BF51-1395CE1352AB/d/Visual Studio Code 2.app/Contents/Resources/app/extensions/ms-vscode.js-debug/src/bootloader.js:1:15
+    142  100.0%            JS: ~<anonymous> /private/var/folders/rl/pgvvs8jj0xv2r03srf61b9dc0000gn/T/AppTranslocation/A89824DA-F3F1-4239-BF51-1395CE1352AB/d/Visual Studio Code 2.app/Contents/Resources/app/extensions/ms-vscode.js-debug/src/bootloader.js:1:1
+     47   17.0%    /Users/chetanupreti/.nvm/versions/node/v20.12.1/bin/node
+     41   87.2%      /Users/chetanupreti/.nvm/versions/node/v20.12.1/bin/node
+      6   14.6%        JS: ~<anonymous> node:https:1:1
+      6  100.0%          /Users/chetanupreti/.nvm/versions/node/v20.12.1/bin/node
+      6  100.0%            /Users/chetanupreti/.nvm/versions/node/v20.12.1/bin/node
+      5   12.2%        JS: ~<anonymous> node:crypto:1:1
+      5  100.0%          /Users/chetanupreti/.nvm/versions/node/v20.12.1/bin/node
+      5  100.0%            JS: ~compileForPublicLoader node:internal/bootstrap/realm:331:25
+      4    9.8%        JS: ~<anonymous> node:internal/streams/duplex:1:1
+      4  100.0%          /Users/chetanupreti/.nvm/versions/node/v20.12.1/bin/node
+      4  100.0%            /Users/chetanupreti/.nvm/versions/node/v20.12.1/bin/node
+      4    9.8%        JS: ~<anonymous> node:internal/child_process:1:1
+      4  100.0%          /Users/chetanupreti/.nvm/versions/node/v20.12.1/bin/node
+      4  100.0%            /Users/chetanupreti/.nvm/versions/node/v20.12.1/bin/node
+      3    7.3%        JS: ~<anonymous> node:tls:1:1
+      3  100.0%          /Users/chetanupreti/.nvm/versions/node/v20.12.1/bin/node
+      3  100.0%            /Users/chetanupreti/.nvm/versions/node/v20.12.1/bin/node
+      2    4.9%        JS: ~<anonymous> node:net:1:1
+      2  100.0%          /Users/chetanupreti/.nvm/versions/node/v20.12.1/bin/node
+      2  100.0%            /Users/chetanupreti/.nvm/versions/node/v20.12.1/bin/node
+      2    4.9%        JS: ~<anonymous> node:child_process:1:1
+      2  100.0%          /Users/chetanupreti/.nvm/versions/node/v20.12.1/bin/node
+      2  100.0%            JS: ~compileForPublicLoader node:internal/bootstrap/realm:331:25
+      2    4.9%        JS: ~<anonymous> node:_http_server:1:1
+      2  100.0%          /Users/chetanupreti/.nvm/versions/node/v20.12.1/bin/node
+      2  100.0%            /Users/chetanupreti/.nvm/versions/node/v20.12.1/bin/node
+      1    2.4%        JS: ~<anonymous> node:worker_threads:1:1
+      1  100.0%          /Users/chetanupreti/.nvm/versions/node/v20.12.1/bin/node
+      1  100.0%            /Users/chetanupreti/.nvm/versions/node/v20.12.1/bin/node
+      1    2.4%        JS: ~<anonymous> node:tty:1:1
+      1  100.0%          /Users/chetanupreti/.nvm/versions/node/v20.12.1/bin/node
+      1  100.0%            /Users/chetanupreti/.nvm/versions/node/v20.12.1/bin/node
+      1    2.4%        JS: ~<anonymous> node:stream:1:1
+      1  100.0%          /Users/chetanupreti/.nvm/versions/node/v20.12.1/bin/node
+      1  100.0%            /Users/chetanupreti/.nvm/versions/node/v20.12.1/bin/node
+      1    2.4%        JS: ~<anonymous> node:module:1:1
+      1  100.0%          /Users/chetanupreti/.nvm/versions/node/v20.12.1/bin/node
+      1  100.0%            /Users/chetanupreti/.nvm/versions/node/v20.12.1/bin/node
+      1    2.4%        JS: ~<anonymous> node:internal/worker:1:1
+      1  100.0%          /Users/chetanupreti/.nvm/versions/node/v20.12.1/bin/node
+      1  100.0%            /Users/chetanupreti/.nvm/versions/node/v20.12.1/bin/node
+      1    2.4%        JS: ~<anonymous> node:internal/streams/pipeline:1:1
+      1  100.0%          /Users/chetanupreti/.nvm/versions/node/v20.12.1/bin/node
+      1  100.0%            /Users/chetanupreti/.nvm/versions/node/v20.12.1/bin/node
+      1    2.4%        JS: ~<anonymous> node:internal/streams/end-of-stream:1:1
+      1  100.0%          /Users/chetanupreti/.nvm/versions/node/v20.12.1/bin/node
+      1  100.0%            /Users/chetanupreti/.nvm/versions/node/v20.12.1/bin/node
+      1    2.4%        JS: ~<anonymous> node:internal/streams/compose:1:1
+      1  100.0%          /Users/chetanupreti/.nvm/versions/node/v20.12.1/bin/node
+      1  100.0%            /Users/chetanupreti/.nvm/versions/node/v20.12.1/bin/node
+      1    2.4%        JS: ~<anonymous> node:internal/crypto/pbkdf2:1:1
+      1  100.0%          /Users/chetanupreti/.nvm/versions/node/v20.12.1/bin/node
+      1  100.0%            /Users/chetanupreti/.nvm/versions/node/v20.12.1/bin/node
+      1    2.4%        JS: ~<anonymous> node:internal/crypto/hkdf:1:1
+      1  100.0%          /Users/chetanupreti/.nvm/versions/node/v20.12.1/bin/node
+      1  100.0%            /Users/chetanupreti/.nvm/versions/node/v20.12.1/bin/node
+      1    2.4%        JS: ~<anonymous> node:_tls_common:1:1
+      1  100.0%          /Users/chetanupreti/.nvm/versions/node/v20.12.1/bin/node
+      1  100.0%            /Users/chetanupreti/.nvm/versions/node/v20.12.1/bin/node
+      1    2.4%        JS: ~<anonymous> node:_http_common:1:1
+      1  100.0%          /Users/chetanupreti/.nvm/versions/node/v20.12.1/bin/node
+      1  100.0%            /Users/chetanupreti/.nvm/versions/node/v20.12.1/bin/node
+      1    2.4%        /Users/chetanupreti/.nvm/versions/node/v20.12.1/bin/node
+      1  100.0%          JS: ~Module._load node:internal/modules/cjs/loader:949:24
+      1  100.0%            /Users/chetanupreti/.nvm/versions/node/v20.12.1/bin/node
+      3    6.4%      JS: ~compileForPublicLoader node:internal/bootstrap/realm:331:25
+      3  100.0%        JS: ~loadBuiltinModule node:internal/modules/helpers:96:27
+      3  100.0%          JS: ~Module._load node:internal/modules/cjs/loader:949:24
+      3  100.0%            JS: ~Module.require node:internal/modules/cjs/loader:1223:36
+      2    4.3%      JS: ~<anonymous> /private/var/folders/rl/pgvvs8jj0xv2r03srf61b9dc0000gn/T/AppTranslocation/A89824DA-F3F1-4239-BF51-1395CE1352AB/d/Visual Studio Code 2.app/Contents/Resources/app/extensions/ms-vscode.js-debug/src/bootloader.js:1:15
+      2  100.0%        JS: ~<anonymous> /private/var/folders/rl/pgvvs8jj0xv2r03srf61b9dc0000gn/T/AppTranslocation/A89824DA-F3F1-4239-BF51-1395CE1352AB/d/Visual Studio Code 2.app/Contents/Resources/app/extensions/ms-vscode.js-debug/src/bootloader.js:1:1
+      2  100.0%          JS: ~Module._compile node:internal/modules/cjs/loader:1322:37
+      2  100.0%            JS: ~Module._extensions..js node:internal/modules/cjs/loader:1381:37
+      1    2.1%      JS: ~<anonymous> /private/var/folders/rl/pgvvs8jj0xv2r03srf61b9dc0000gn/T/AppTranslocation/A89824DA-F3F1-4239-BF51-1395CE1352AB/d/Visual Studio Code 2.app/Contents/Resources/app/extensions/ms-vscode.js-debug/src/bootloader.js:2:6553
+      1  100.0%        /Users/chetanupreti/.nvm/versions/node/v20.12.1/bin/node
+      1  100.0%          JS: ~<anonymous> /private/var/folders/rl/pgvvs8jj0xv2r03srf61b9dc0000gn/T/AppTranslocation/A89824DA-F3F1-4239-BF51-1395CE1352AB/d/Visual Studio Code 2.app/Contents/Resources/app/extensions/ms-vscode.js-debug/src/bootloader.js:2:7585
+      1  100.0%            /Users/chetanupreti/.nvm/versions/node/v20.12.1/bin/node
+      5    1.8%    JS: ~readdirSync node:fs:1497:21
+      5  100.0%      JS: ~ja /private/var/folders/rl/pgvvs8jj0xv2r03srf61b9dc0000gn/T/AppTranslocation/A89824DA-F3F1-4239-BF51-1395CE1352AB/d/Visual Studio Code 2.app/Contents/Resources/app/extensions/ms-vscode.js-debug/src/bootloader.js:8:8506
+      5  100.0%        JS: ~Ha /private/var/folders/rl/pgvvs8jj0xv2r03srf61b9dc0000gn/T/AppTranslocation/A89824DA-F3F1-4239-BF51-1395CE1352AB/d/Visual Studio Code 2.app/Contents/Resources/app/extensions/ms-vscode.js-debug/src/bootloader.js:8:6835
+      5  100.0%          JS: ~<anonymous> /private/var/folders/rl/pgvvs8jj0xv2r03srf61b9dc0000gn/T/AppTranslocation/A89824DA-F3F1-4239-BF51-1395CE1352AB/d/Visual Studio Code 2.app/Contents/Resources/app/extensions/ms-vscode.js-debug/src/bootloader.js:8:6168
+      5  100.0%            JS: ~<anonymous> /private/var/folders/rl/pgvvs8jj0xv2r03srf61b9dc0000gn/T/AppTranslocation/A89824DA-F3F1-4239-BF51-1395CE1352AB/d/Visual Studio Code 2.app/Contents/Resources/app/extensions/ms-vscode.js-debug/src/bootloader.js:1:15
+      5    1.8%    JS: ~internalCompileFunction node:internal/vm:124:33
+      5  100.0%      JS: ~wrapSafe node:internal/modules/cjs/loader:1253:18
+      5  100.0%        JS: ~Module._compile node:internal/modules/cjs/loader:1322:37
+      5  100.0%          JS: ~Module._extensions..js node:internal/modules/cjs/loader:1381:37
+      5  100.0%            JS: ~Module.load node:internal/modules/cjs/loader:1193:33
+      4    1.4%    JS: ~setSourceMapsEnabled node:internal/source_map/source_map_cache:55:30
+      4  100.0%      JS: ~initializeSourceMapsHandlers node:internal/process/pre_execution:699:38
+      4  100.0%        JS: ~prepareExecution node:internal/process/pre_execution:97:26
+      4  100.0%          JS: ~prepareMainThreadExecution node:internal/process/pre_execution:53:36
+      4  100.0%            JS: ~<anonymous> node:internal/main/run_main_module:1:1
+      3    1.1%    JS: ~value node:internal/console/constructor:339:20
+      3  100.0%      JS: ~log node:internal/console/constructor:378:6
+      3  100.0%        JS: ~<anonymous> /Users/chetanupreti/Desktop/Problems/JavaScript/nodejs-interview-questions/scenario-based.js:1:1
+      3  100.0%          JS: ~Module._compile node:internal/modules/cjs/loader:1322:37
+      3  100.0%            JS: ~Module._extensions..js node:internal/modules/cjs/loader:1381:37
+      3    1.1%    JS: ~toRealPath node:internal/modules/helpers:57:20
+      3  100.0%      JS: ~Module._findPath node:internal/modules/cjs/loader:609:28
+      3  100.0%        JS: ~Module._resolveFilename node:internal/modules/cjs/loader:1057:35
+      3  100.0%          JS: ~Module._load node:internal/modules/cjs/loader:949:24
+      3  100.0%            JS: ~internalRequire node:internal/modules/cjs/loader:166:25
+      3    1.1%    JS: ~realpathSync node:fs:2625:22
+      3  100.0%      JS: ~toRealPath node:internal/modules/helpers:57:20
+      3  100.0%        JS: ~Module._findPath node:internal/modules/cjs/loader:609:28
+      3  100.0%          JS: ~Module._resolveFilename node:internal/modules/cjs/loader:1057:35
+      3  100.0%            JS: ~Module._load node:internal/modules/cjs/loader:949:24
+      3    1.1%    JS: ~WriteStream node:tty:84:21
+      3  100.0%      JS: ~createWritableStdioStream node:internal/bootstrap/switches/is_main_thread:47:35
+      2   66.7%        JS: ~getStderr node:internal/bootstrap/switches/is_main_thread:170:19
+      2  100.0%          JS: ~refresh node:internal/util/colors:25:10
+      2  100.0%            JS: ~<anonymous> node:internal/util/colors:1:1
+      1   33.3%        JS: ~getStdout node:internal/bootstrap/switches/is_main_thread:148:19
+      1  100.0%          JS: ~get node:internal/console/constructor:213:14
+      1  100.0%            JS: ~value node:internal/console/constructor:339:20
+
