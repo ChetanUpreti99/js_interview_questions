@@ -127,7 +127,7 @@ const writableStream = fs.createWriteStream('output_1.txt');
 readStream.pipe(writableStream);
  */
 
-/* const cluster = require('cluster');
+const cluster = require('cluster');
 const http = require('http');
 const numCPUs = require('os').cpus().length;
 
@@ -156,7 +156,7 @@ if (cluster.isMaster) {
 
     console.log(`Worker ${process.pid} started`);
 }
- */
+
 
 /*
 const cluster = require("cluster");
