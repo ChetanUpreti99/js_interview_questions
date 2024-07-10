@@ -210,8 +210,8 @@ function callback() {
 }
 const object = {
     length: 5,
-    method(callback) {
-        callback();
+    method(fn) {
+        fn();
     },
     method_2() {
         console.log(`arguments`, arguments);

@@ -43,6 +43,13 @@ const obj = {
 
 console.log(obj);
 
+/* 
+{
+    a: "three",
+    b: "two"
+}
+*/
+
 //create a function multiplyByTwo(obj) that multiply all numeric property values of nums by 2
 let num = {
     a: 100,
@@ -110,6 +117,13 @@ const settings = {
 
 const data = JSON.stringify(settings, ['age', 'health']); //only stringify 2 keys of objects
 console.log(data);
+
+/**
+"{
+"age": 25,
+"health": 45
+}"
+ */
 
 //output
 
