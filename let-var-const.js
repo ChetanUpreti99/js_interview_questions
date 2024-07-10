@@ -1,19 +1,33 @@
 //Scope
 //certain place where defined variable exists and can be recognized.
 
-//function scope
-function name() {
 
+function check() {
+    if (true) {
+        //function scope
+        var v = "chetan"
+    }
+    console.log(v);
+}
+check();
+
+//global scope
+var name = "chetan";
+//var is function scope
+
+
+function name() {
+    //function scope
 }
 
 //block scope
 {
-    var a = 5;
+    var a = 5; // due to function scope.
     let b = 9;
     console.log(b);
 }
 
-console.log(a);
+console.log(a); //5
 //console.log(b); //ReferenceError: b is not defined
 
 //variable shadowing
@@ -64,13 +78,19 @@ var a_1;
 //hoisting
 //on creation phase JS engine moves all variables and functions top that is known as hoisting.
 
+/**
+ * JS execution context.
+ * creation phase
+ * execution phase
+ */
+
 
 console.log(a_3);
 console.log(b_3); //Uncaught ReferenceError: cannot access b_3 before initialization.
 var a_3 = 5;
 let b_3 = 9; //hoist but in temporal dead zone
 //temporal dead zone is the time between declaration and initialization of let and const variable.
-//is the term to define when variables are in score but not declared yet.
+//is the term to define when variables are in scope but not declared yet.
 
 
 
