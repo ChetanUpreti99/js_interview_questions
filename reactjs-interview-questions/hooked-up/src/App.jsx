@@ -7,6 +7,7 @@ import UseRefHook from './components/UseRefHook';
 import UseContextHook from './components/UseContextHook';
 import UseMemoUseCallBackHook from './components/UseMemoAndUseCallback';
 import UseImperativeHandleHook from './components/UseImperativeHandleHook';
+import UseReducerHook from './components/UseReducerHook';
 
 function App() {
 	let [counter, setCounter] = useState(0);
@@ -17,8 +18,9 @@ function App() {
 				{/* <UseEffectHook /> */}
 				{/* <UseRefHook /> */}
 				{/* <UseContextHook /> */}
-				<UseMemoUseCallBackHook />
+				{/* <UseMemoUseCallBackHook /> */}
 				{/* <UseImperativeHandleHook /> */}
+				{<UseReducerHook />}
 			</div>
 		</>
 	)

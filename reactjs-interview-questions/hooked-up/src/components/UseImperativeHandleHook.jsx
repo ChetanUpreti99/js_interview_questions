@@ -20,8 +20,6 @@ const ChildComponent = forwardRef((props, ref) => {
         return { focusInput }
     }
     )
-
-
     return (
         <div>
             <input ref={inputRef}></input>
