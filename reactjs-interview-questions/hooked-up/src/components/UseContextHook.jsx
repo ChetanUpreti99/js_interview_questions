@@ -5,6 +5,12 @@ const UserContext = createContext(null);
 
 const UseContextHook = () => {
     const [theme, setTheme] = useState("light")
+    const [profile, setProfile] = useState({ name: "chetan", age: 26 })
+
+
+    const changeProfile = () => {
+        setProfile({ ...profile, age: 28 });
+    }
 
     const changeTheme = () => {
         theme === 'light' ? setTheme('dark') : setTheme('light');
