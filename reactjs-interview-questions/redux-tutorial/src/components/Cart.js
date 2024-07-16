@@ -4,6 +4,7 @@ const Cart = () => {
             <p>
                 Cart length 0
                 Cart Price 0
+                <span>⬅️</span>
             </p>
         </div>
     )

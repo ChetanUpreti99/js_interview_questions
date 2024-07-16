@@ -20,9 +20,9 @@
                 console.log("data in inside");
             })
         }
-
     }
-}) */
+}) 
+*/
 
 
 /* fs.readFile("file1.txt", "utf-8")
