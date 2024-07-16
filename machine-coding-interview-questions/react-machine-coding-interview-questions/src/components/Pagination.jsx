@@ -1,4 +1,11 @@
-const Pagination = ({ products, page }) => {
+
+const Pagination = ({ products, page, setPage, totalPages }) => {
+
+    const selectPage = (selectedPage) => {
+        if (selectedPage > 0 && selectedPage <= totalPages / 10 && page !== selectedPage) {
+            setPage(selectedPage);
+        }
+    }
     return (
         <>
 
@@ -12,7 +19,7 @@ const Pagination = ({ products, page }) => {
                     </span>
 
                     {
-                        [...Array(products.length / 10)].map((_, index) => {
+                        [...Array(Math.floor(totalPages / 10))].map((_, index) => {
                             return (
                                 <span
                                     key={index}
@@ -25,7 +32,7 @@ const Pagination = ({ products, page }) => {
 
                     }
                     <span
-                        className={page < products.length / 10 ? "" : "pagination__disable"}
+                        className={page < totalPages / 10 ? "" : "pagination__disable"}
                         onClick={() => selectPage(page + 1)}>
                         ➡️
                     </span>
@@ -37,3 +44,5 @@ const Pagination = ({ products, page }) => {
         </>
     )
 }
+
+export default Pagination;

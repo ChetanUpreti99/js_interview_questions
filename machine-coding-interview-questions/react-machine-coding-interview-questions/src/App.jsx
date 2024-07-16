@@ -1,7 +1,10 @@
+import { useEffect, useState } from "react";
+
+import Pagination from "./components/Pagination";
 import './App.css'
 
 
-import { useEffect, useState } from "react";
+
 function App() {
 	const [products, setProducts] = useState([]);
 	const [page, setPage] = useState(1);
@@ -22,11 +25,6 @@ function App() {
 		}
 	}
 
-	const selectPage = (selectedPage) => {
-		if (selectedPage > 0 && selectedPage <= totalPages / 10 && page !== selectedPage) {
-			setPage(selectedPage);
-		}
-	}
 
 	return (
 		<>
@@ -55,45 +53,12 @@ function App() {
 			<>
 
 				{
-					products.length > 0 && <div className="pagination">
-						<span
-							className={page > 1 ? "" : "pagination__disable"}
-							onClick={() => selectPage(page - 1)}
-						>
-							⬅️
-						</span>
-
-						{
-							/* [...Array(products.length / 10)].map((_, index) => {
-								return (
-									<span
-										key={index}
-										className={page === index + 1 ? "pagination__selected" : ""}
-										onClick={() => selectPage(index + 1)}>
-										{index + 1}
-									</span>
-								)
-							}) */
-							[...Array(Math.floor(totalPages / 10))].map((_, index) => {
-								return (
-									<span
-										key={index}
-										className={page === index + 1 ? "pagination__selected" : ""}
-										onClick={() => selectPage(index + 1)}>
-										{index + 1}
-									</span>
-								)
-							})
-
-
-
-						}
-						<span
-							className={page < totalPages / 10 ? "" : "pagination__disable"}
-							onClick={() => selectPage(page + 1)}>
-							➡️
-						</span>
-					</div>
+					products.length > 0 && <Pagination
+						products={products}
+						page={page}
+						totalPages={totalPages}
+						setPage={setPage}
+					/>
 
 				}
 
