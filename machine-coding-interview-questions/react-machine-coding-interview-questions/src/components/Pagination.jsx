@@ -1,4 +1,8 @@
-
+/**
+Implement a Button Based Pagination with Truncation functionality in React JS
+Requirements remain similar to previous lesson, 
+just we are going to truncate our buttons into "..." (ellipsis) when it exceeds a provided limit.
+*/
 const Pagination = ({ products, page, setPage, totalPages }) => {
 
     const selectPage = (selectedPage) => {
@@ -8,7 +12,6 @@ const Pagination = ({ products, page, setPage, totalPages }) => {
     }
     return (
         <>
-
             {
                 products.length > 0 && <div className="pagination">
                     <span
