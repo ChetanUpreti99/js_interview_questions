@@ -251,6 +251,8 @@ console.log(personObj_2);
 }
 */
 
+//structuredClone
+
 //shallow copy and Deep copy or clone copy
 
 //shallow copy - when we copy one object to another then some of property has same reference

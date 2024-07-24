@@ -40,3 +40,13 @@
 .pagination__selected{
   background-color: rgb(220, 220, 220);
 }
+
+/* Star Rating */
+
+.star__rating{
+  font-size: 40px;
+}
+
+.star{
+  cursor: pointer;
+}
