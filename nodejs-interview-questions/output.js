@@ -2,7 +2,7 @@ const fs = require('fs');
 
 setTimeout(() => {
     console.log('Timeout');
-}, 11);
+}, 9);
 
 setImmediate(() => {
     console.log('Immediate');
