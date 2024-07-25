@@ -18,8 +18,8 @@ app.use(express.urlencoded({ limit: "50mb", extended: true, parameterLimit: 5000
 const client = new S3Client({
     region: "ap-south-1",
     credentials: {
-        accessKeyId: "AKIAXRERTNTKAGUDGFLG",
-        secretAccessKey: "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"
+        accessKeyId: "*",
+        secretAccessKey: "*"
     }
 });
 
