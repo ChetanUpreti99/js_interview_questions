@@ -86,3 +86,8 @@ function getUserAge1(user: ProfileType): number {
 console.log(user1);
 console.log(getUserAge1(user1));
 
+
+
+// Explain difference between interface and type in TypeScript by writing some code
+// Level: Easy, Duration: 5 minutes
+
