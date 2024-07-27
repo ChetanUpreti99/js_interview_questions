@@ -518,3 +518,179 @@ let newArr: Array<string | number> = ["hye", 12121];
 // with tuple we have to define all possible types
 
 let arr1: [string, number, string] = ["hye", 121, "grr"];
+
+
+// explain how will you define type for an optional property of an object in TS
+// Level: Easy, Duration: 3 minutes
+
+interface Customer {
+	firstName: string;
+	lastName: string;
+	middleName?: string;
+}
+
+
+let cus: Customer = {
+	firstName: "Chetan",
+	lastName: "upreti",
+}
+
+const getFirstName = (cus?: Customer) => {
+	return cus?.firstName;
+}
+
+// explain how will you define type for dynamic keys for an object in TS
+// Level: Medium, Duration: 10 minutes
+
+
+interface NewCustomer {
+	firstName: string;
+	lastName: string;
+	id: number;
+}
+
+const cus1: NewCustomer[] = [{
+	firstName: "chetan", lastName: "upreti", id: 1
+}, {
+	firstName: "chetan1", lastName: "upreti1", id: 2
+}]
+
+
+let colums: Array<keyof NewCustomer> = ["firstName", "lastName", "id"];
+
+let result = cus1.map((cus) => colums.map((column) => cus[column]));
+
+// explain what is an index signature in TS
+// Level: Medium, Duration: 5 minutes
+
+interface NewUser {
+	firstName: string;
+	lastName: string;
+	//index signature to defined object key types
+	[key: string]: number | string;
+
+	//not allowed
+	//isVip:boolean;
+}
+
+
+// explain what is Record helper in TS
+// Level: Medium, Duration: 5 minutes
+type NewUser1 = Record<string, number>;
+
+const us: NewUser1 = {
+	age: 1,
+	//not allowed
+	//isValid:boolean
+}
+
+
+// explain what is Omit utility in TS
+// explain what is Pick utility in TS
+// Level: Easy, Duration: 5 minutes
+
+
+interface Customer {
+	id: number;
+	firstName: string;
+	lastName: string;
+	age: number;
+}
+
+//discard few properties
+type Custom1 = Omit<Customer, "id" | "age">;
+
+//pick few properties
+type Custom2 = Pick<Customer, "firstName" | "age">
+
+// explain what is Readonly helper in TS
+// Level: Easy, Duration: 5 minutes
+
+
+//properties should not to be modify 
+let cus3: Readonly<Customer> = {
+	id: 1,
+	firstName: "Cheta",
+	lastName: "c",
+	age: 1
+}
+
+//not allowed
+//cus3.lastName = "dsdds"
+
+
+// explain what is Partial helper in TS
+// Level: Easy, Duration: 5 minutes
+
+
+//it helps to create new type from an existing interface with all
+//properties marked as optional
+const updateCustomer = (cus: Customer, fields: Partial<Customer>) => {
+	return {
+		...cus,
+		...fields
+	}
+}
+
+const updatedCustomer = updateCustomer(cus3, { age: 43 });
+
+console.log(updatedCustomer);
+
+
+
+
+// explain what is Required helper in TS
+// Level: Easy, Duration: 5 minutes
+
+
+interface ProfileMe {
+	name: string;
+	age?: number;
+	skills?: string;
+}
+//it helps to create new type from an existing interface with all
+//properties marked as required eg put apis
+const myProfile1: Required<ProfileMe> = {
+	name: "chetan",
+	age: 5,
+	skills: "hye"
+}
+
+
+
+// explain type inference in TS
+// Level: Easy, Duration: 2 minutes
+
+//typescript infers datatype of variable when we haven't explicitly defined
+//data type of variable. Here fullName datatype  is infered by Ts as string
+let fullName = "chetan";
+
+
+// explain literal type in TS
+// Level: Medium, Duration: 5 minutes
+
+/**
+ * 1.
+ * if for const we don't declare data type explicitly then it will use 
+ * value of RHS as literal type
+ */
+const you = 4;
+const apiMessage = "success"
+
+/**
+ * 2. Useful example
+ */
+
+type Status = "success" | "failure" | "in-progress";
+
+const getStatus = (status: Status): Status => {
+	if (status === "success") {
+		return "success";
+	} else if (status === "failure") {
+		return "failure";
+	} else {
+		return "in-progress";
+	}
+}
+
+
