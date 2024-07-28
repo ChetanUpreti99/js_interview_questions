@@ -10,8 +10,8 @@ Difference between TS and JS
 
 //explicit
 let num: number = 17;
-let name: string = "chetan";
-console.log(num, name);
+let name6: string = "chetan";
+console.log(num, name6);
 
 
 //implicit
@@ -296,14 +296,14 @@ const handleError = (error: unknown) => {
  */
 
 
-const useInputElement = document.querySelector(".user-input") as HTMLInputElement | null;
+/* const useInputElement = document && document.querySelector(".user-input") as HTMLInputElement | null;
 // since usernameInputElement might be null
 if (useInputElement) {
 	useInputElement.addEventListener("blur", (event: FocusEvent) => {
 		const target = event.target as HTMLInputElement;
 		console.log(target.value);
 	})
-}
+} */
 
 // Give an example on how will you add type for class
 // Level: Medium, Duration: 15 minutes
@@ -523,19 +523,19 @@ let arr1: [string, number, string] = ["hye", 121, "grr"];
 // explain how will you define type for an optional property of an object in TS
 // Level: Easy, Duration: 3 minutes
 
-interface Customer {
+interface Customer9 {
 	firstName: string;
 	lastName: string;
 	middleName?: string;
 }
 
 
-let cus: Customer = {
+let cus6: Customer9 = {
 	firstName: "Chetan",
 	lastName: "upreti",
 }
 
-const getFirstName = (cus?: Customer) => {
+const getFirstName = (cus?: Customer9) => {
 	return cus?.firstName;
 }
 
@@ -674,7 +674,10 @@ let fullName = "chetan";
  * if for const we don't declare data type explicitly then it will use 
  * value of RHS as literal type
  */
+
+//literal type 4
 const you = 4;
+//literal type success
 const apiMessage = "success"
 
 /**
@@ -692,5 +695,62 @@ const getStatus = (status: Status): Status => {
 		return "in-progress";
 	}
 }
+
+
+// discuss tsconfig.json file
+// Level: Medium, Duration: 5 minutes
+
+// this is the typescript config file
+// readmore at: https://www.typescriptlang.org/docs/handbook/tsconfig-json.html
+
+
+
+// what is TSC and TSLS
+// Level: Medium, Duration: 5 minutes
+
+/**
+Three building blocks
+1. TS programming language 
+2. TS compiler (TSC)
+3. TS language service
+
+1. language: syntax, keywords, type annotations
+2. TSC convert TS to JS
+3. TSLS: additional layer ex. autocompletion, auto import,
+code formatting, signature help, colorization etc
+which are mainly added in code editor such as VS code
+
+https://github.com/microsoft/TypeScript/wiki/Using-the-Language-Service-API
+ */
+
+
+// how will you transpile ts file into js
+// Level: Medium, Duration: 3 minutes
+
+// use the tsc binary
+// `./node_modules/typescript/bin/tsc --help`
+// `./node_modules/typescript/bin/tsc src/main.ts --outfile build.js`
+const a: boolean = false;
+
+
+// d.ts file in ts
+// Level: Medium, Duration: 3 minutes
+
+
+// `./node_modules/typescript/bin/tsc src/main.ts --outfile build.js --declaration` 
+//compile Ts file to js and also create declaration files
+
+//type declaration files are created if you want to expose
+//your apis as a library so that a project which is using our code can also use our type
+
+// .map file in ts
+// Level: Medium, Duration: 3 minutes
+
+
+// `./node_modules/typescript/bin/tsc src/main.ts --outfile build.js --declaration --sourceMap` 
+//generates source maps for our js files in the project ex: build.js.map
+
+
+//it will help us see code not minified with TS. mainly used or debugging
 
 

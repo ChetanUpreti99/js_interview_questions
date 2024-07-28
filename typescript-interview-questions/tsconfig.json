@@ -1,9 +1,9 @@
 {
   "compilerOptions": {
-    "target": "ES2020",
+    "target": "ES2020", // to which JS version we will compile our files. For older browsers we might wanna use ES5 to compile our code to an older version
     "useDefineForClassFields": true,
-    "module": "ESNext",
-    "lib": [
+    "module": "ESNext", // module resolution that ts will use while transpiling ts code to JS code. Other types are commonjs, ES6, IMD etc. Use commonjs for node projects but ESNext for latest projects
+    "lib": [ // all libs and apis that we want to use
       "ES2020",
       "DOM",
       "DOM.Iterable"
@@ -17,13 +17,13 @@
     "moduleDetection": "force",
     "noEmit": true,
     /* Linting */
-    "strict": true,
+    "strict": true, // Recommended to have stricter version of linting
     "noImplicitAny": true,
-    "noUnusedLocals": true,
-    "noUnusedParameters": true,
+    "noUnusedLocals": true, // should not have any unused locals
+    "noUnusedParameters": true, // should not have any unused parameters
     "noFallthroughCasesInSwitch": true
   },
-  "include": [
+  "include": [ // tells us which folders to enable ts for ex: in this case it is src
     "src"
   ]
 }
