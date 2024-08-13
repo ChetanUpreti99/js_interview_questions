@@ -126,7 +126,7 @@ const writableStream = fs.createWriteStream('output_1.txt');
 
 readStream.pipe(writableStream);
  */
-
+/* 
 const cluster = require('cluster');
 const http = require('http');
 const numCPUs = require('os').cpus().length;
@@ -156,7 +156,7 @@ if (cluster.isMaster) {
 
     console.log(`Worker ${process.pid} started`);
 }
-
+ */
 
 /*
 const cluster = require("cluster");
@@ -247,3 +247,19 @@ app.get("/home", (req, res) => {
 app.listen(4000, () => {
     console.log('server running');
 }); */
+
+
+
+const fs = require("fs");
+
+const readStream = fs.createReadStream("file.txt", "utf-8");
+
+
+
+readStream.on("data", (chuck) => {
+    console.log(`chuck`, chuck);
+})
+
+readStream.on("end", () => {
+    console.log(`end`);
+})
